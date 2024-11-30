@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code for Google Authenticator</title>
+    <style>
+          /* Basic styling for the body */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+           h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+               /* Center the qr box */
+        .qr-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            text-align: center;
+        }
+              /* Style the signup button */
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="qr-container">
+    <h2>Scan this QR Code with Google Authenticator</h2>
+
+    <!-- Display QR code -->
+    <img src="data:image/png;base64,{{ img_byte_arr }}" alt="QR Code">
+
+    <br><br>
+    <!-- Button to return to the login page -->
+    <a href="/">
+        <button>Return to Login</button>
+    </a>
+
+</div>
+</body>
+</html>
