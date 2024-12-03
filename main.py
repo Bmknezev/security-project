@@ -81,9 +81,6 @@ def otp():
 # Simple dashboard (for successful login)
 @app.route('/dashboard')
 def dashboard():
-    if 'email' not in session:
-        return redirect('/')
-
     return f"Welcome!"
 
 
